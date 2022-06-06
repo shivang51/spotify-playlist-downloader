@@ -8,13 +8,15 @@ import spotipy
 from youtube_search import YoutubeSearch
 from pathvalidate import sanitize_filename, sanitize_filepath
 from datetime import datetime
+from dotenv import load_dotenv
 
 
 class SpotifyScrapper:
     def __init__(self):
+        load_dotenv()
         self.access_token_cache = "./.cache/access_token"
-        self.CLIENT_ID = "19b316cb3129427fae0cfc2af98b9616"
-        self.CLIENT_SECRET = "651e50069c44451488d4057711ed5b50"
+        self.CLIENT_ID = os.environ.get("CLIENT_ID")
+        self.CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
         self._init_spotify_()
 
     def _init_spotify_(self):
