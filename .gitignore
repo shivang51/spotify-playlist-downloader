@@ -1,3 +1,5 @@
 downloads
 .cache
 .env
+converted
+__pycache__

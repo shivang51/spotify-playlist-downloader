@@ -8,7 +8,7 @@ import spotipy
 from youtube_search import YoutubeSearch
 from pathvalidate import sanitize_filename, sanitize_filepath
 from datetime import datetime
-from dotenv import load_dotenv
+from dotenv import load_dotenv # to install use pip install "python-dotenv"
 
 
 class SpotifyScrapper:
